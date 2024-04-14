@@ -1,0 +1,127 @@
+/* 版权声明 */
+/* Copyright 2023 The MediaPipe Authors. */
+
+/* 许可证声明 */
+/* Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+http://www.apache.org/licenses/LICENSE-2.0 */
+
+/* 使用外部库 */
+/* @use "@material"; */
+
+/* 设置全局样式 */
+body {
+  font-family: roboto; /* 使用Roboto字体 */
+  margin: 2em; /* 设置页面边距 */
+  color: #3d3d3d; /* 设置文字颜色 */
+  --mdc-theme-primary: #007f8b; /* 设置Material Design组件主色 */
+  --mdc-theme-on-primary: #f1f3f4; /* 设置Material Design组件主色文本颜色 */
+}
+
+/* 设置标题1样式 */
+h1 {
+  color: #007f8b; /* 设置标题1颜色 */
+}
+
+/* 设置标题2样式 */
+h2 {
+  clear: both; /* 清除浮动 */
+}
+
+/* 设置视频样式 */
+video {
+  clear: both; /* 清除浮动 */
+  display: block; /* 设置为块级元素 */
+  transform: rotateY(180deg); /* 以Y轴旋转180度 */
+  -webkit-transform: rotateY(180deg); /* Safari和Chrome浏览器的兼容性 */
+  -moz-transform: rotateY(180deg); /* Firefox浏览器的兼容性 */
+  height: 280px; /* 设置高度 */
+}
+
+/* 设置段落样式 */
+section {
+  opacity: 1; /* 设置透明度 */
+  transition: opacity 500ms ease-in-out; /* 设置过渡效果 */
+}
+
+/* 隐藏元素样式 */
+.removed {
+  display: none; /* 隐藏元素 */
+}
+
+/* 透明元素样式 */
+.invisible {
+  opacity: 0.2; /* 设置透明度 */
+}
+
+/* 点击检测元素样式 */
+.detectOnClick {
+  position: relative; /* 相对定位 */
+  float: left; /* 左浮动 */
+  width: 48%; /* 设置宽度 */
+  margin: 2% 1%; /* 设置外边距 */
+  cursor: pointer; /* 设置鼠标样式为手型 */
+}
+
+/* 视频视图元素样式 */
+.videoView {
+  position: absolute; /* 绝对定位 */
+  float: left; /* 左浮动 */
+  width: 48%; /* 设置宽度 */
+  margin: 2% 1%; /* 设置外边距 */
+  cursor: pointer; /* 设置鼠标样式为手型 */
+  min-height: 500px; /* 设置最小高度 */
+}
+
+/* 视频视图段落样式 */
+.videoView p,
+.detectOnClick p {
+  padding-top: 5px; /* 设置上内边距 */
+  padding-bottom: 5px; /* 设置下内边距 */
+  background-color: #007f8b; /* 设置背景颜色 */
+  color: #fff; /* 设置文本颜色 */
+  border: 1px dashed rgba(255, 255, 255, 0.7); /* 设置边框 */
+  z-index: 2; /* 设置堆叠顺序 */
+  margin: 0; /* 设置外边距 */
+}
+
+/* 高亮元素样式 */
+.highlighter {
+  background: rgba(0, 255, 0, 0.25); /* 设置背景颜色 */
+  border: 1px dashed #fff; /* 设置边框 */
+  z-index: 1; /* 设置堆叠顺序 */
+  position: absolute; /* 绝对定位 */
+}
+
+/* 画布样式 */
+.canvas {
+  z-index: 1; /* 设置堆叠顺序 */
+  position: absolute; /* 绝对定位 */
+  pointer-events: none; /* 禁止鼠标事件 */
+}
+
+/* 输出画布样式 */
+.output_canvas {
+  transform: rotateY(180deg); /* 以Y轴旋转180度 */
+  -webkit-transform: rotateY(180deg); /* Safari和Chrome浏览器的兼容性 */
+  -moz-transform: rotateY(180deg); /* Firefox浏览器的兼容性 */
+}
+
+/* 点击检测元素样式 */
+.detectOnClick {
+  z-index: 0; /* 设置堆叠顺序 */
+  font-size: calc(8px + 1.2vw); /* 设置字体大小 */
+}
+
+/* 点击检测元素图片样式 */
+.detectOnClick img {
+  width: 45vw; /* 设置宽度 */
+}
+
+/* 输出元素样式 */
+.output {
+  display: none; /* 隐藏元素 */
+  width: 100%; /* 设置宽度 */
+  font-size: calc(8px + 1.2vw); /* 设置字体大小 */
+}
