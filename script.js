@@ -9,7 +9,7 @@ let enableWebcamButton;  // 启用网络摄像头按钮
 let webcamRunning = false;  // 网络摄像头运行状态
 
 // 视频显示尺寸
-const videoHeight = "360px";
+const videoHeight = "360px"; 
 const videoWidth = "480px";
 
 // 创建手势识别器的异步函数
@@ -20,7 +20,7 @@ const createGestureRecognizer = async () => {
     // 根据选项创建手势识别器
     gestureRecognizer = await GestureRecognizer.createFromOptions(vision, {
         baseOptions: {
-            modelAssetPath: "https://storage.googleapis.com/mediapipe-models/gesture_recognizer/gesture_recognizer/float16/1/gesture_recognizer.task",
+            modelAssetPath: "https://gg-bomb.github.io/MpGesRec/gesture_recognizer_3.task",
             delegate: "GPU"
         },
         runningMode: runningMode
@@ -156,9 +156,7 @@ function enableCam(event) {
 let lastVideoTime = -1;
 let results = undefined;
 
-// 预
-
-测网络摄像头
+// 预测网络摄像头
 async function predictWebcam() {
     const webcamElement = document.getElementById("webcam");
     // 开始检测视频流
