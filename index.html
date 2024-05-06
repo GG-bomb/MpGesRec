@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>手势检测</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+
+
+<h1>手势检测</h1>
+
+<section id="demos" class="invisible">
+  <h2>正确手势和错误手势示例</h2>
+  <p><em>下面哪种握笔手势正确呢？</em> 点击图片查看识别结果吧！</p>
+
+  <div class="detectOnClick">
+    <img src="imgpreview.jpg" crossorigin="anonymous" title="这是正确的吗？" />
+    <p class="classification removed">
+  </div>
+  <div class="detectOnClick">
+    <img src="拳头型.jpg" crossorigin="anonymous" title="这是正确的吗？" />
+    <p class="classification removed">
+  </div>
+
+  <h2><br>实时识别</h2>
+  <p>点击下方按钮后请授予权限以开启摄像头</br></p>
+
+  <div id="liveView" class="videoView">
+    <button id="webcamButton" class="mdc-button mdc-button--raised">
+      <span class="mdc-button__ripple"></span>
+      <span class="mdc-button__label">开始识别</span>
+    </button>
+    <div style="position: relative;">
+      <video id="webcam" autoplay playsinline></video>
+      <canvas class="output_canvas" id="output_canvas" width="1280" height="720" style="position: absolute; left: 0px; top: 0px;"></canvas>
+      <p id='gesture_output' class="output">
+    </div>
+  </div>
+</section>
+<!-- partial -->
+  <script type="module" src="./script.js"></script>
+
+</body>
+</html>
